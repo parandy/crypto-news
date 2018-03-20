@@ -6,6 +6,15 @@
  */
 
 /**
+ * General
+ *
+ * @see  crypto_news_header_widget_region()
+ * @see  crypto_news_get_sidebar()
+ */
+add_action( 'crypto_news_sidebar',        'crypto_news_get_sidebar',          10 );
+
+
+/**
  * Header
  * 
  */

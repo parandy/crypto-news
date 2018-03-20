@@ -35,6 +35,18 @@ if ( ! function_exists('crypto_news_header_banner') ) {
 	}
 }
 
+if ( ! function_exists( 'crypto_news_get_sidebar' ) ) {
+	/**
+	 * Display crypto news sidebar
+	 *
+	 * @uses get_sidebar()
+	 * @since 1.0.0
+	 */
+	function crypto_news_get_sidebar() {
+		get_sidebar();
+	}
+}
+
 if ( ! function_exists( 'crypto_news_site_title_or_logo' ) ) {
 	/**
 	 * Display the site title or logo
