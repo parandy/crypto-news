@@ -15,8 +15,8 @@
 	/**
 	 * Functions hooked into crypto_news_single_post add_action
 	 *
-	 * @hooked crypto_news_post_header          - 10
-	 * @hooked crypto_news_post_meta            - 20
+	 * @hooked crypto_news_single_post_header          - 10
+	 * @hooked crypto_news_single_post_thumbnail            - 20
 	 * @hooked crypto_news_post_content         - 30
 	 */
 	do_action( 'crypto_news_single_post' );

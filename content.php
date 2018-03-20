@@ -13,9 +13,7 @@
 	/**
 	 * Functions hooked in to crypto_news_loop_post action.
 	 *
-	 * @hooked crypto_news_post_header          - 10
-	 * @hooked crypto_news_post_meta            - 20
-	 * @hooked crypto_news_post_content         - 30
+	 * @hooked crypto_news_loop_posts          - 10
 	 */
 	do_action( 'crypto_news_loop_post' );
 	?>
