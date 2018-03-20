@@ -1,0 +1,31 @@
+# Compiled CSS
+*.css
+
+# Minified js
+*.min.js
+
+# Sass
+.sass-cache
+
+# Grunt
+/node_modules/
+/crypto/
+npm-debug.log
+
+# Files
+crypto.zip
+
+# Codekit
+config.codekit
+
+# Transifex
+.transifexrc
+/languages/*.po
+/languages/*.pot
+/languages/*.mo
+
+# Subline Text
+.idea
+
+# macOS
+.DS_Store
