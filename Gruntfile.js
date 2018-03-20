@@ -176,16 +176,16 @@ module.exports = function( grunt ) {
 				type: 'wp-theme',
 				domainPath: 'languages',
 				potHeaders: {
-					'report-msgid-bugs-to': 'https://gitlab.com/conixconverter/crypto.gitissues',
+					'report-msgid-bugs-to': 'https://github.com/parandy/crypto-news.git',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 				}
 			},
 
 			frontend: {
 				options: {
-					potFilename: 'crypto.pot',
+					potFilename: 'crypto-news.pot',
 					exclude: [
-						'crypto/.*' // Exclude deploy directory
+						'crypto-news/.*' // Exclude deploy directory
 					]
 				}
 			}
@@ -194,7 +194,7 @@ module.exports = function( grunt ) {
 		// Check textdomain errors.
 		checktextdomain: {
 			options:{
-				text_domain: 'crypto',
+				text_domain: 'crypto-news',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -240,7 +240,7 @@ module.exports = function( grunt ) {
 					'!.gitignore',
 					'!.jshintrc'
 				],
-				dest: 'crypto',
+				dest: 'crypto-news',
 				expand: true,
 				dot: true
 			}
@@ -249,11 +249,11 @@ module.exports = function( grunt ) {
 		compress: {
 			zip: {
 				options: {
-					archive: './crypto.zip',
+					archive: './crypto-news.zip',
 					mode: 'zip'
 				},
 				files: [
-					{ src: './crypto/**' }
+					{ src: './crypto-news/**' }
 				]
 			}
 		}
