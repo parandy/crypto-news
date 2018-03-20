@@ -9,11 +9,11 @@
 
 # Grunt
 /node_modules/
-/crypto/
+/crypto-news/
 npm-debug.log
 
 # Files
-crypto.zip
+crypto-news.zip
 
 # Codekit
 config.codekit
