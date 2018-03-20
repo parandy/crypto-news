@@ -238,7 +238,8 @@ module.exports = function( grunt ) {
 					'!npm-debug.log',
 					'!.stylelintrc',
 					'!.gitignore',
-					'!.jshintrc'
+					'!.jshintrc',
+					'!.git'
 				],
 				dest: 'crypto-news',
 				expand: true,
