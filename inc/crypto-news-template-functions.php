@@ -315,7 +315,7 @@ function crypto_news_meta_date() {
 
 	$show_last_update = apply_filters('crypto_news_meta_date_show_last_update', true);
 
-	$date_prefix = apply_filters('crypto_news_meta_date_show_prefix', sprintf(__('<span class="meta-prefix">%s</span>'), __('Last updated:', 'crypto-news')) );
+	$date_prefix = apply_filters('crypto_news_meta_date_show_prefix', sprintf('<span class="meta-prefix">%s</span>'), __('Last updated:', 'crypto-news') );
 
 	$attr_date = esc_attr ( $show_last_update == true ? get_the_modified_date( 'c' ) : get_the_date( 'c' ) );
 	$html_date = esc_html( $show_last_update == true ? get_the_modified_date() : get_the_date() );
