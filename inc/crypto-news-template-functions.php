@@ -600,3 +600,41 @@ if ( ! function_exists( 'crypto_news_post_thumbnail' ) ) {
 		
 	}
 }
+
+if ( ! function_exists( 'crypto_news_page_header' ) ) {
+	/**
+	 * Display the page header
+	 *
+	 * @since 1.0.0
+	 */
+	function crypto_news_page_header() {
+		?>
+		<header class="entry-header">
+			<?php
+			crypto_news_post_thumbnail( 'full' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			?>
+		</header><!-- .entry-header -->
+		<?php
+	}
+}
+if ( ! function_exists( 'crypto_news_page_content' ) ) {
+	/**
+	 * Display the post content
+	 *
+	 * @since 1.0.0
+	 */
+	function crypto_news_page_content() {
+		?>
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+		<?php
+	}
+}

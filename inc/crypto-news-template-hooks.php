@@ -48,6 +48,18 @@ add_action( 'crypto_news_single_post_before_title', 'crypto_news_single_post_met
 add_action( 'crypto_news_single_post_after_title', 'crypto_news_single_post_meta_after', 10 );
 
 /**
+ * Pages
+ *
+ * @see  crypto_news_page_header()
+ * @see  crypto_news_page_content()
+ * @see  crypto_news_display_comments()
+ */
+add_action( 'crypto_news_page',       'crypto_news_page_header',          10 );
+add_action( 'crypto_news_page',       'crypto_news_page_content',         20 );
+add_action( 'crypto_news_page_after', 'crypto_news_display_comments',     10 );
+
+
+/**
  * Footer
  *
  * @see  crypto_news_footer_widgets()
