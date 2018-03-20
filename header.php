@@ -39,10 +39,8 @@
 			 * Functions hooked into crypto_news_header action
 			 *
 			 * @hooked crypto_news_site_branding                    - 10
-			 * @hooked crypto_news_primary_navigation_wrapper       - 42
-			 * @hooked crypto_news_primary_navigation               - 50
-			 * @hooked crypto_news_header_cart                      - 60
-			 * @hooked crypto_news_primary_navigation_wrapper_close - 68
+			 * @hooked crypto_news_header_banner          			- 20
+			 * @hooked crypto_news_primary_navigation               - 30
 			 */
 			do_action( 'crypto_news_header' ); ?>
 
@@ -63,6 +61,5 @@
 		/**
 		 * Functions hooked in to crypto_news_content_top
 		 *
-		 * @hooked woocommerce_breadcrumb - 10
 		 */
 		do_action( 'crypto_news_content_top' );
