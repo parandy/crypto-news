@@ -2,7 +2,7 @@
 /**
  * Crypto engine room
  *
- * @package crypto
+ * @package Crypto_News
  */
 
 /**
