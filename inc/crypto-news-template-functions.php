@@ -630,7 +630,7 @@ if ( ! function_exists( 'crypto_news_page_content' ) ) {
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'crypto-news' ),
 					'after'  => '</div>',
 				) );
 			?>

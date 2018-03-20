@@ -1,11 +1,11 @@
 {
-  "name": "storefront",
-  "title": "Storefront",
+  "name": "crypto-news",
+  "title": "crypto-news",
   "version": "2.2.8",
-  "homepage": "http://woocommerce.com/storefront/",
+  "homepage": "https://github.com/parandy/crypto-news",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woothemes/storefront.git"
+    "url": "https://github.com/parandy/crypto-news.git"
   },
   "scripts": {
     "build": "grunt",
