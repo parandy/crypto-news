@@ -47,6 +47,70 @@ if ( ! function_exists( 'crypto_news_get_sidebar' ) ) {
 	}
 }
 
+if ( ! function_exists( 'crypto_news_footer_widgets' ) ) {
+	/**
+	 * Display the footer widget regions.
+	 *
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function crypto_news_footer_widgets() {
+		$rows    = intval( apply_filters( 'crypto_news_footer_widget_rows', 1 ) );
+		$regions = intval( apply_filters( 'crypto_news_footer_widget_columns', 4 ) );
+
+		for ( $row = 1; $row <= $rows; $row++ ) :
+
+			// Defines the number of active columns in this footer row.
+			for ( $region = $regions; 0 < $region; $region-- ) {
+				if ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {
+					$columns = $region;
+					break;
+				}
+			}
+
+			if ( isset( $columns ) ) : ?>
+				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>><?php
+
+					for ( $column = 1; $column <= $columns; $column++ ) :
+						$footer_n = $column + $regions * ( $row - 1 );
+
+						if ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>
+
+							<div class="block footer-widget-<?php echo strval( $column ); ?>">
+								<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>
+							</div><?php
+
+						endif;
+					endfor; ?>
+
+				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> --><?php
+
+				unset( $columns );
+			endif;
+		endfor;
+	}
+}
+
+if ( ! function_exists( 'crypto_news_credit' ) ) {
+	/**
+	 * Display the theme credit
+	 *
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function crypto_news_credit() {
+		?>
+		<div class="site-info">
+			<?php echo esc_html( apply_filters( 'crypto_news_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
+			<?php if ( apply_filters( 'crypto_news_credit_link', true ) ) { ?>
+			<?php echo '<a href="https://coinxconverter.com/" target="_blank" title="' . esc_attr__( 'Free Cryptocurrency News', 'crypto-news' ) . '" rel="author">' . esc_html__( 'Designed by Coinx Team', 'crypto-news' ) . '</a>' ?>
+			<?php } ?>
+		</div><!-- .site-info -->
+		<?php
+	}
+}
+
+
 if ( ! function_exists( 'crypto_news_site_title_or_logo' ) ) {
 	/**
 	 * Display the site title or logo
@@ -483,7 +547,7 @@ if ( ! function_exists( 'crypto_news_post_nav' ) ) {
 }
 if ( ! function_exists( 'crypto_news_display_comments' ) ) {
 	/**
-	 * Storefront display comments
+	 * Crypto News display comments
 	 *
 	 * @since  1.0.0
 	 */
