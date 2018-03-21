@@ -40,11 +40,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-== Credits ==
+## Credits
 
 * Source Sans Pro - Google Fonts
 Source Sans Pro by Paul D. Hunt, https://fonts.google.com/specimen/Source+Sans+Pro
-
 License: Open Font License
 License URI: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
 
