@@ -1,14 +1,12 @@
 # Crypto News
 
+Crypto News is the perfect theme for cryptocurrency based blogs. And also suitable for news, newspaper, magazine, publishing, business and any kind of sites. It provides multiple ways of monetization and can be used to cover blockchain, BitCoin, AltCoins and any other topic from the cryptocurrency world.
+
 Crypto News Theme by Coinx Team, https://coinxconverter.com/
 
 ## Tags 
 blog, news, two-columns, custom-background, custom-header, custom-menu, blog, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, footer-widgets, right-sidebar, three-columns
 
-
-## About Crypto News 
-
-Crypto News is the perfect theme for cryptocurrency based blogs. And also suitable for news, newspaper, magazine, publishing, business and any kind of sites. It provides multiple ways of monetization and can be used to cover blockchain, BitCoin, AltCoins and any other topic from the cryptocurrency world.
 
 ## Installation
 
