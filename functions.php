@@ -25,7 +25,8 @@ $crypto_news = (object) array(
 	 * Initialize all the things.
 	 */
 	'main'       => require 'inc/class-crypto-news.php',
-	'customizer' => require 'inc/customizer/class-crypto-news-customizer.php',
+	// TODO: Will add next version
+	//'customizer' => require 'inc/customizer/class-crypto-news-customizer.php',
 );
 
 require 'inc/crypto-news-functions.php';
@@ -33,8 +34,10 @@ require 'inc/crypto-news-template-hooks.php';
 require 'inc/crypto-news-template-functions.php';
 require 'inc/crypto-news-callback-functions.php';
 
-if ( is_admin() ) {
+
+// TODO: Will implement for next version
+/*if ( is_admin() ) {
 
 	$crypto_news->admin = require 'inc/admin/class-crypto-news-admin.php';
 
-}
+}*/
