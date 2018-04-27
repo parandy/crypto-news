@@ -27,7 +27,7 @@ Crypto News includes support for Infinite Scroll in Jetpack.
 
 ## Copyright
 
-Crypto News WordPress Theme, Copyright 2016 WordPress.org
+Crypto News WordPress Theme, Copyright 2018 CoinxConverter.com
 Crypto News is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
