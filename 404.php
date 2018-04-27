@@ -22,7 +22,7 @@ get_header(); ?>
 					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'crypto-news' ); ?></p>
 
 					<?php
-					echo '<section aria-label="' . esc_html__( 'Search', 'crypto-news' ) . '">';
+					echo '<section aria-label="' . esc_attr__( 'Search', 'crypto-news' ) . '">';
 
 				
 					get_search_form();

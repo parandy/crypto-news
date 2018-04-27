@@ -171,7 +171,7 @@ if ( ! function_exists( 'crypto_news_primary_navigation' ) ) {
 	function crypto_news_primary_navigation() {
 		?>
 		<div class="crypto-news-primary-navigation">
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'crypto-news' ); ?>">
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'crypto-news' ); ?>">
 		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'crypto_news_menu_toggle_text', __( 'Menu', 'crypto-news' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
@@ -391,7 +391,7 @@ if ( ! function_exists( 'crypto_news_post_meta' ) ) {
 			<div class="vcard author">
 				<?php
 					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
-					echo '<div class="label">' . esc_attr( __( 'Written by', 'crypto-news' ) ) . '</div>';
+					echo '<div class="label">' . esc_attr__( 'Written by', 'crypto-news' ) . '</div>';
 					echo sprintf( '<a href="%1$s" class="url fn" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 				?>
 			</div>
@@ -402,7 +402,7 @@ if ( ! function_exists( 'crypto_news_post_meta' ) ) {
 			if ( $categories_list ) : ?>
 				<div class="cat-links">
 					<?php
-					echo '<div class="label">' . esc_attr( __( 'Posted in', 'crypto-news' ) ) . '</div>';
+					echo '<div class="label">' . esc_html__( 'Posted in', 'crypto-news' ) . '</div>';
 					echo wp_kses_post( $categories_list );
 					?>
 				</div>
@@ -425,7 +425,7 @@ if ( ! function_exists( 'crypto_news_post_meta' ) ) {
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 				<div class="comments-link">
-					<?php echo '<div class="label">' . esc_attr( __( 'Comments', 'crypto-news' ) ) . '</div>'; ?>
+					<?php echo '<div class="label">' . esc_attr__( 'Comments', 'crypto-news' ) . '</div>'; ?>
 					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'crypto-news' ), __( '1 Comment', 'crypto-news' ), __( '% Comments', 'crypto-news' ) ); ?></span>
 				</div>
 			<?php endif; ?>
@@ -665,7 +665,7 @@ if ( ! function_exists( 'crypto_news_comment' ) ) {
 			<?php printf( wp_kses_post( '<cite class="fn">%s</cite>', 'crypto-news' ), get_comment_author_link() ); ?>
 			</div>
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<em class="comment-awaiting-moderation"><?php esc_attr_e( 'Your comment is awaiting moderation.', 'crypto-news' ); ?></em>
+				<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'crypto-news' ); ?></em>
 				<br />
 			<?php endif; ?>
 

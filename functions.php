@@ -24,15 +24,15 @@ $crypto_news = (object) array(
 	/**
 	 * Initialize all the things.
 	 */
-	'main'       => require 'inc/class-crypto-news.php',
+	'main'       => require get_template_directory(). '/inc/class-crypto-news.php',
 	// TODO: Will add next version
 	//'customizer' => require 'inc/customizer/class-crypto-news-customizer.php',
 );
 
-require 'inc/crypto-news-functions.php';
-require 'inc/crypto-news-template-hooks.php';
-require 'inc/crypto-news-template-functions.php';
-require 'inc/crypto-news-callback-functions.php';
+require get_template_directory(). '/inc/crypto-news-functions.php';
+require get_template_directory(). '/inc/crypto-news-template-hooks.php';
+require get_template_directory(). '/inc/crypto-news-template-functions.php';
+require get_template_directory(). '/inc/crypto-news-callback-functions.php';
 
 
 // TODO: Will implement for next version

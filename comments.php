@@ -18,22 +18,32 @@ if ( post_password_required() ) {
 }
 ?>
 
-<section id="comments" class="comments-area" aria-label="<?php esc_html_e( 'Post Comments', 'crypto-news' ); ?>">
+<section id="comments" class="comments-area" aria-label="<?php esc_attr_e( 'Post Comments', 'crypto-news' ); ?>">
 
 	<?php
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'crypto-news' ) ),
-					number_format_i18n( get_comments_number() ),
+			$crypto_news_comment_count = get_comments_number();
+			if ( '1' === $crypto_news_comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'crypto-news' ),
 					'<span>' . get_the_title() . '</span>'
 				);
+			} else {
+				printf( // WPCS: XSS OK.
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $crypto_news_comment_count, 'comments title', 'crypto-news' ) ),
+					number_format_i18n( $crypto_news_comment_count ),
+					'<span>' . get_the_title() . '</span>'
+				);
+			}
 			?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Above', 'crypto-news' ); ?>">
+		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Comment Navigation Above', 'crypto-news' ); ?>">
 			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'crypto-news' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'crypto-news' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'crypto-news' ) ); ?></div>
@@ -51,7 +61,7 @@ if ( post_password_required() ) {
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Below', 'crypto-news' ); ?>">
+		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Comment Navigation Below', 'crypto-news' ); ?>">
 			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'crypto-news' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'crypto-news' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'crypto-news' ) ); ?></div>
