@@ -172,7 +172,7 @@ if ( ! function_exists( 'crypto_news_primary_navigation' ) ) {
 		?>
 		<div class="crypto-news-primary-navigation">
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Navigation', 'crypto-news' ); ?>">
-		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'crypto_news_menu_toggle_text', __( 'Menu', 'crypto-news' ) ) ); ?></span></button>
+		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_html( apply_filters( 'crypto_news_menu_toggle_text', __( 'Menu', 'crypto-news' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
 				array(

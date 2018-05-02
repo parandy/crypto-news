@@ -79,4 +79,5 @@ License URI: https://github.com/oddbird/susy/blob/master/LICENSE.txt
 2. https://www.pexels.com/photo/ripple-etehereum-and-bitcoin-and-micro-sdhc-card-844124/
 3. https://www.pexels.com/photo/gold-and-silver-bitcoins-730567/
 
+License:  Creative Commons Zero (CC0) license
 License URL: https://www.pexels.com/photo-license/
